@@ -1,0 +1,37 @@
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-secondary">Employee Card</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque maiores modi sequi aperiam incidunt voluptates nesciunt quam ipsum aspernatur! Consectetur architecto nihil doloremque, blanditiis fugiat aspernatur tempore maxime quas!</p>
+            <button type="button" class="btn btn-success btn-sm mb-3" (click)="getData()">Get Data</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let employee of employees">
+            <div class="card mt-3">
+                <div class="card-head p-3 bg-danger text-white">
+                    <p class="h6 text-center">{{employee.name.first}}{{employee.name.last}}</p>
+
+                </div>
+                <div class="card-body text-center ">
+                    <img [src]="employee.picture.medium">
+
+                    <ul class="list-group mt-2">
+                        <li class="list-group-item">
+                            Age:{{employee.dob.age}}Yrs
+                        </li>
+                        <li class="list-group-item">
+                            Email:{{employee.email}}
+                        </li>
+                        <li class="list-group-item">
+                            Location:{{employee.location.city}}
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
